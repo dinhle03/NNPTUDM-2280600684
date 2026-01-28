@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Posts và Comments</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!-- PHẦN POSTS -->
+    <h2>Quản lý Bài viết</h2>
+    <table border="1" style="border-collapse: collapse; width: 80%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>TITLE</th>
+          <th>VIEWS</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <br />
+    <div>
+      <input type="hidden" id="post_id_edit" />
+      <input type="text" id="title_txt" placeholder="Tiêu đề" />
+      <input type="number" id="view_txt" placeholder="Lượt xem" />
+      <button onclick="Save()">Save Post</button>
+    </div>
+
+    <hr />
+
+    <!-- PHẦN COMMENTS -->
+    <h2>Quản lý Bình luận</h2>
+    <table border="1" style="border-collapse: collapse; width: 80%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nội dung</th>
+          <th>Post ID</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody id="commentBody"></tbody>
+    </table>
+    <br />
+    <div>
+      <input type="hidden" id="comment_id_edit" />
+      <input type="text" id="comment_text" placeholder="Nội dung bình luận" />
+      <input type="text" id="comment_postid" placeholder="ID bài viết" />
+      <button id="btnSaveComment" onclick="SaveComment()">Save Comment</button>
+    </div>
+  </body>
+</html>
